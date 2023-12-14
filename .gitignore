@@ -1,0 +1,27 @@
+# Backup files
+*~
+*#
+.#*
+DEADJOE
+.DS_Store
+*.orig
+*.tiled-session
+.mscbackup
+*.backup
+
+# Generated/output files
+Dist/*
+Object/*
+Source/Generated/*
+*.fasl
+
+bin/skyline-tool
+bin/buildapp
+bin/zx7mini
+
+# IDE temp files
+.emacs.desktop
+.emacs.desktop.lock
+*slime-notes*
+.#*#
+
