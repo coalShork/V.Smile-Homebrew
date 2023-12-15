@@ -2,7 +2,7 @@ default:	example
 
 all:	example docs tools
 
-tools:	bin/skyline-tool
+tools:	bin/skyline-tool bin/V.Frown bin/un-asm
 
 docs:	Dist/V.smile.homebrew.pdf
 
@@ -19,8 +19,20 @@ libraries already compiled. On subsequent runs, though, it'll be much quicker." 
 		--load-system skyline-tool \
 		--entry skyline-tool::command
 
+bin/zx7mini:	SkylineTool/zx7mini/zx7mini.c
+	$(CC) SkylineTool/zx7mini/zx7mini.c -o bin/zx7mini
+	chmod +x bin/zx7mini
+
 bin/buildapp:
 	sbcl --load SkylineTool/prepare-system.lisp --eval '(cl-user::quit)'
+
+bin/V.Frown:
+	mkdir -p bin/
+	cd ./Tools/V.Frown && make && mv VFrown ../../bin/V.Frown
+
+bin/un-asm:
+	mkdir -p bin/
+	cd bin && gcc ../Tools/Assembler/un-asm.c -o un-asm
 
 YEAR=$(shell date +%Y)
 YEAR2=$(shell date +%y)

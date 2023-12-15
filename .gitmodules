@@ -1,0 +1,12 @@
+[submodule "V.Frown"]
+	path = Tools/V.Frown
+	url = git@github.com:adventuring/VFrown.git
+[submodule "hardware-docs"]
+	path = Source/Doc/HardwareDocs
+	url = git@github.com:adventuring/vsmile-hardware-docs
+[submodule "assembler"]
+	path = Tools/.Stuff
+	url = git@github.com:adventuring/vsmilestuff
+[submodule "zx7mini"]
+	path = SkylineTool/zx7mini
+	url = https://github.com/antoniovillena/zx7mini

@@ -18,6 +18,8 @@ Source/Generated/*
 bin/skyline-tool
 bin/buildapp
 bin/zx7mini
+bin/un-asm
+bin/V.Frown
 
 # IDE temp files
 .emacs.desktop
